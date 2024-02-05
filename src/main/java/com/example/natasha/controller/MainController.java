@@ -3,6 +3,7 @@ package com.example.natasha.controller;
 import com.example.natasha.model.Customer;
 import com.example.natasha.service.ServiceCustomer;
 import lombok.AllArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
