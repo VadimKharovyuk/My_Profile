@@ -17,7 +17,7 @@ import java.util.List;
 public class MainController {
     private final ServiceCustomer serviceCustomer ;
 
-    @GetMapping("/api")
+    @GetMapping("welcome/api")
     public String hello(){
         return "hello.html";
     }

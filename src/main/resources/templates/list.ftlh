@@ -30,7 +30,7 @@
 
 
     </table>
-    <form action="/api" method="get">
+    <form action="/welcome/api" method="get">
         <input type="submit" value="back">
     </form>
 

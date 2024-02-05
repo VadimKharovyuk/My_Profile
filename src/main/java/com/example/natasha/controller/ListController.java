@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ListController {
     private final ServiceCustomer serviceCustomer ;
- @GetMapping("/all")
+ @GetMapping("/welcome/api/all")
     public String list ( Model model){
         List<Customer> customerList = serviceCustomer.findAll();
         model.addAttribute("customerList",customerList);
