@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface ServiceCustomer extends JpaRepository<Customer,Long> {
 
 
+
 }

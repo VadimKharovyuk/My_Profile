@@ -29,14 +29,9 @@
         </#list>
 
 
-
-
-
-
     </table>
-    <form action="/api" method="post">
+    <form action="/api" method="get">
         <input type="submit" value="back">
-
     </form>
 
 
