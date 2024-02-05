@@ -18,6 +18,7 @@ public class ListController {
  @GetMapping("/all")
     public String list ( Model model){
         List<Customer> customerList = serviceCustomer.findAll();
+     System.out.println(customerList);
         model.addAttribute("customerList",customerList);
 
         return  "list";

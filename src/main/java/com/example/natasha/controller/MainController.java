@@ -24,6 +24,7 @@ public class MainController {
     @PostMapping("/api")
     public String add(Customer customer){
         serviceCustomer.save(customer);
+
         return  "redirect:/api";
 
     }
