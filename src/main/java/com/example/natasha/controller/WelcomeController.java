@@ -9,4 +9,5 @@ public class WelcomeController {
     public String welcomePage(){
         return "welcome.html";
     }
+
 }
