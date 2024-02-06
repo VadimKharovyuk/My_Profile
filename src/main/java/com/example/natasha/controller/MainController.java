@@ -20,7 +20,7 @@ public class MainController {
     public String add(Customer customer){
         serviceCustomer.save(customer);
 
-        return  "redirect:/api";
+        return  "redirect:/welcome/new-user/api";
 
     }
 
