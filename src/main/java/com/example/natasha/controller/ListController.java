@@ -13,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class ListController {
     private final ServiceCustomer  serviceCustomer;
- @GetMapping("/welcome/api/all")
+ @GetMapping("/welcome/new-user/api/all")
 
     public String list ( Model model){
         List<Customer> customerList = serviceCustomer.findAll();

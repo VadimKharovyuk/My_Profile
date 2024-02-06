@@ -9,9 +9,17 @@
 <h2> Пожалуйста  зарегистрируйтесь</h2>
 
 <div>
-    <form action="/welcome/api" method="get">
+    <form action="/welcome/new-user/api" method="get">
         <input type="submit" value="registr">
 
+    </form>
+
+    <form action="/welcome"method="post">
+        <input name="name" placeholder="Имя">
+        <input name="password" placeholder="пароль">
+        <input name="role" placeholder="Роль">
+
+        <input type="submit" value="записаться">
     </form>
 </div>
 

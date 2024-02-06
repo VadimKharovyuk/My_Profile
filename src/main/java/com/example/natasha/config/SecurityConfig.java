@@ -1,8 +1,11 @@
 package com.example.natasha.config;
 
 
+import com.example.natasha.service.MyUserDelailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -21,20 +24,28 @@ import org.springframework.security.web.SecurityFilterChain;
 
 public class SecurityConfig {
     @Bean
-    public UserDetailsService userDetailsService(PasswordEncoder encoder){
-        UserDetails admin= User.builder().username("admin").password(encoder.encode("admin")).build();
-        UserDetails user = User.builder().username("user").password(encoder.encode("user")).build();
-        return  new InMemoryUserDetailsManager(admin,user);
+    public UserDetailsService userDetailsService(){
+//        UserDetails admin= User.builder().username("admin").password(encoder.encode("admin")).build();
+//        UserDetails user = User.builder().username("user").password(encoder.encode("user")).build();
+//        return  new InMemoryUserDetailsManager(admin,user);
+        return new MyUserDelailsService();
 
     }
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)throws Exception {
         return httpSecurity.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(aut->aut.requestMatchers("/welcome").permitAll()
-                        .requestMatchers("/welcome/**").authenticated())
+                .authorizeHttpRequests(aut->aut.requestMatchers("/welcome","/welcome/new-user").permitAll()
+                        .requestMatchers("/welcome/new-user/**").authenticated())
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                 .build();
 
+    }
+    @Bean
+    public AuthenticationProvider authenticationProvider(){
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        provider.setUserDetailsService(userDetailsService());
+        provider.setPasswordEncoder(passwordEncoder());
+        return provider;
     }
     @Bean
     public PasswordEncoder passwordEncoder(){

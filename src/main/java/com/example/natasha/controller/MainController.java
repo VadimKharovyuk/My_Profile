@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class MainController {
     private final ServiceCustomer serviceCustomer;
 
-    @GetMapping("welcome/api")
+    @GetMapping("welcome/new-user/api")
     public String hello(){
         return "hello.html";
     }
-    @PostMapping("/api")
+    @PostMapping("/welcome/new-user/api")
     public String add(Customer customer){
         serviceCustomer.save(customer);
 
