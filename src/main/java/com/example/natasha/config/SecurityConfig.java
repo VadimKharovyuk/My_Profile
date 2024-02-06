@@ -1,5 +1,6 @@
 package com.example.natasha.config;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -23,8 +24,8 @@ public class SecurityConfig {
     public UserDetailsService userDetailsService(PasswordEncoder encoder){
         UserDetails admin= User.builder().username("admin").password(encoder.encode("admin")).build();
         UserDetails user = User.builder().username("user").password(encoder.encode("user")).build();
-
         return  new InMemoryUserDetailsManager(admin,user);
+
     }
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)throws Exception {
