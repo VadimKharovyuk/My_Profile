@@ -24,7 +24,7 @@
                 <td>${customer.lastname}</td>
                 <td>${customer.data}</td>
                 <td>${customer.phone}</td>
-                <td>${customer.money}</td>
+<#--                <td>${customer.money}</td>-->
                 <td>${customer.place}</td>
             </tr>
         </#list>

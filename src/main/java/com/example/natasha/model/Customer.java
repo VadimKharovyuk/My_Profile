@@ -17,7 +17,7 @@ public  class Customer {
     private String lastname;
     private String data;
     private String phone;
-    private long money;
+//    private long money;
     @Column(name = "Mesto")
     private String place;
 }
