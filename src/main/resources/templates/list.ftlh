@@ -5,8 +5,9 @@
     <title>Title</title>
 </head>
 <body>
+
 <div>
-    <table>
+    <table >
         <tr>
             <th>Id</th>
             <th>name</th>
