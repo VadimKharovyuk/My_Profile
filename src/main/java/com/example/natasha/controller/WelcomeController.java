@@ -18,7 +18,7 @@ public class WelcomeController {
 
     @GetMapping("/welcome")
     public String welcomePage(){
-        return "welcome.html";
+        return "welcome";
     }
     @PostMapping("/welcome")
     public String addUser( MyUser user){

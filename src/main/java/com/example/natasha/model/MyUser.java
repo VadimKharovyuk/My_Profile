@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 @Data
 @Entity
 @Component
+//registration
 
 public class MyUser {
     @Id

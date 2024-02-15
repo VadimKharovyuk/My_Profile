@@ -6,6 +6,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
+<nav>
+    <a href="/welcome" > Home</a>
+    <a href="/welcome/new-user/api"> Войти </a>
+    <a href=""> Зарегистрироваться </a>
+
+    <span></span>
+</nav>
+
 <div class="container">
     <div class="row">
         <h2>Список Гостей</h2>
@@ -21,7 +29,6 @@
             <th>lastName</th>
             <th>data</th>
             <th>phone</th>
-<#--            <th>money</th>-->
             <th>place</th>
         </tr>
         <#list customerList as customer >
@@ -31,13 +38,17 @@
                 <td>${customer.lastname}</td>
                 <td>${customer.data}</td>
                 <td>${customer.phone}</td>
-<#--                <td>${customer.money}</td>-->
                 <td>${customer.place}</td>
             </tr>
         </#list>
 
 
+
     </table>
+
+
+
+
     <form action="/welcome/new-user/api" method="get">
         <input type="submit" value="back">
     </form>

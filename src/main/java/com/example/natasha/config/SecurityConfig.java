@@ -36,6 +36,7 @@ public class SecurityConfig {
         return httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(aut->aut.requestMatchers("/welcome","/welcome/new-user").permitAll()
                         .requestMatchers("/welcome/new-user/**").authenticated())
+
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
                 .build();
 

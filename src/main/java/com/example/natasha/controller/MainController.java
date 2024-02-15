@@ -14,13 +14,13 @@ public class MainController {
 
     @GetMapping("welcome/new-user/api")
     public String hello(){
-        return "hello.html";
+        return "hello";
     }
     @PostMapping("/welcome/new-user/api")
     public String add(Customer customer){
         serviceCustomer.save(customer);
 
-        return  "redirect:/welcome/new-user/api";
+        return  "redirect:/welcome";
 
     }
 
