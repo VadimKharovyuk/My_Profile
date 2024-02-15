@@ -21,10 +21,7 @@ public class ListController {
 
         return  "list";
     }
-    @GetMapping("/login")
-    public String login() {
-        return "login";
-    }
+
 
     @GetMapping("/registration")
     public String registration() {

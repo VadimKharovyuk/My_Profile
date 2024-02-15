@@ -10,6 +10,7 @@
     <a href="/welcome" > Home</a>
     <a href="/welcome/new-user/api"> Войти </a>
     <a href=""> Зарегистрироваться </a>
+    <a href="/logout">Выйти</a>
 
     <span></span>
 </nav>

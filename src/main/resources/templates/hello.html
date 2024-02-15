@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <title>Запись на Встречу</title>
 </head>
+
 <body>
 <nav>
     <a href="/welcome" > Home</a>
     <a href="/welcome/new-user/api"> Войти </a>
     <a href="/registration"> Зарегистрироваться </a>
+    <a href="/logout">Выйти</a>
 
     <span></span>
 </nav>
 
-<h1> 🇺🇦Vadim Kharovyuk🇺🇦&copy; 📌</h1>
-<h2> Nice to meet you my friend✅ </h2>
+<h1 style="color: #0635b2"> 🇺🇦Vadim Kharovyuk🇺🇦&copy; 📌</h1>
+<h2 style="color: #000000"> Nice to meet you my friend✅ </h2>
 
 <div>
     <form action="/welcome/new-user/api"method="post">
@@ -26,25 +28,20 @@
         <input type="submit" value="записаться">
     </form>
 </div>
-<h2 style="color: royalblue"> 😎Сheck who's coming 😎</h2>
-<div>
+<h2 style="color: #15bd26"> 😎Сheck who's coming 😎</h2>
+
     <form action="/welcome/new-user/api/all" method="get">
         <input type="submit" value="Сheck">
+    </form>
 
 
-    <br><br>
-    <div>
-        <form action="/logout" method="post">
-            <input type="submit" value="Выйти">
-        </form>
-    </div>
+<div>
+    <footer>
+        Vadim Kharovyuk 1993-2024 &copy;
+    </footer>
 
 </div>
-<br>
 
-<footer>
-    Vadim Kharovyuk 1993-2024 &copy;
-</footer>
 
 
 </body>
