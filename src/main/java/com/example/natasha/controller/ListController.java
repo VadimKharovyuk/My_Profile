@@ -19,7 +19,7 @@ public class ListController {
         List<Customer> customerList = serviceCustomer.findAll();
         model.addAttribute("customerList",customerList);
 
-        return  "list";
+        return "list";
     }
 
 

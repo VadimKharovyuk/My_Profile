@@ -5,6 +5,7 @@ import com.example.natasha.repozitory.ServiceCustomer;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -23,6 +24,12 @@ public class MainController {
         return  "redirect:/welcome";
 
     }
+   @GetMapping("/welcome/new-user/api/all/{id}")
+    public String deleteById(@PathVariable Long id){
+        serviceCustomer.deleteById(id);
+       return  "redirect:/list";
+
+   }
 
 
 }
