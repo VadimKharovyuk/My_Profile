@@ -25,7 +25,6 @@
 <table class="table table-striped-columns" >
 
     <tr>
-<#--        <th>Id</th>-->
         <th>name</th>
         <th>lastName</th>
         <th>data</th>
@@ -34,7 +33,6 @@
     </tr>
     <#list customerList  as customer >
         <tr>
-<#--            <td>${customer.id}</td>-->
             <td>${customer.name}</td>
             <td>${customer.lastname}</td>
             <td>${customer.data}</td>
@@ -42,6 +40,8 @@
             <td>${customer.place}</td>
         </tr>
     </#list>
+
+
 </table>
 
 <form action="/welcome/new-user/api" method="get">
