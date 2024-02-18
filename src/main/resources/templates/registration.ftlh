@@ -13,6 +13,8 @@
     <span></span>
 </nav>
 
+
+
 <h3>Регистрация</h3>
 <form action="/welcome" method="post">
     Имя пользователя: <input type="text" name="name"><br><br>

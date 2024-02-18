@@ -7,73 +7,73 @@
 
 </head>
 
+<body class="d-flex h-100 text-center text-bg-dark">
+<header th:insert="block/header::header"> </header>
 
-<body>
-<!--<nav>-->
-<!--    <a href="/welcome" > Home</a>-->
-<!--    <a href="/welcome/new-user/api"> Войти </a>-->
-<!--    <a href="/registration"> Зарегистрироваться </a>-->
-<!--    <a href="/logout">Выйти</a>-->
+<br>
+<br><br>
+<div class="col">
+    <div>
+        <div>
+            <div>
+                <br><br>
+                <br><br>
+                <div>
+                    <div>
+                        <div>
+                            <h1 style="color: #f1a680"> Vadim  </h1>
+                            <h1 style="color: #ecdcdc"> Kharovyuk  </h1>
+                        </div>
+                    </div>
 
-<!--    <span></span>-->
-<!--</nav>-->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="/welcome">Главная страница</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/registration">Зарегистрироваться</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/welcome/new-user/api">Войти</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout">Выйти</a>
-                </li>
+                </div>
 
-            </ul>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+</div>
+<div>
+    <br><br>
+    <div>
+        <div>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <div>
+                <form action="/welcome/new-user/api"method="post">
+                    <input name="name" placeholder="Имя">
+                    <input name="lastname" placeholder="Фамилия">
+                    <input name="data" placeholder="дата">
+                    <input name="phone" placeholder="номер тлф">
+                    <input name="place" placeholder="место"><br><br>
+                    <input type="submit" value="записаться">
+                </form>
+            </div>
+            <br>
+            <br>
+            <form action="/welcome/new-user/api/all" method="get">
+                <input type="submit" value="Сheck">
+            </form>
 
         </div>
     </div>
-</nav>
-<br>
-<br><br>
-
-<h1 style="color: #0635b2"> 🇺🇦Vadim Kharovyuk🇺🇦&copy; 📌</h1>
-<h2 style="color: #000000"> Nice to meet you my friend✅ </h2>
-
-<div>
-    <form action="/welcome/new-user/api"method="post">
-        <input name="name" placeholder="Имя">
-        <input name="lastname" placeholder="Фамилия">
-        <input name="data" placeholder="дата">
-        <input name="phone" placeholder="номер тлф">
-        <input name="place" placeholder="место">
-        <input type="submit" value="записаться">
-    </form>
-</div>
-<h2 style="color: #15bd26"> 😎Сheck who's coming 😎</h2>
-
-    <form action="/welcome/new-user/api/all" method="get">
-        <input type="submit" value="Сheck">
-    </form>
-<br>
-<br>
-<img src="https://scontent-bom1-2.xx.fbcdn.net/v/t1.6435-9/69283326_2360386174278898_987957729232420864_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=be3454&_nc_ohc=iWWfFfvJhkoAX_XXF5L&_nc_ht=scontent-bom1-2.xx&oh=00_AfDqfYzL1WC4OM6DbzZU7sz5Lt8iOHXh2a4lep6t8O1BfA&oe=65F60D92">
-<br><br>
-
-<div>
-    <footer>
-        Vadim Kharovyuk 1993-2024 &copy;
-    </footer>
-
 </div>
 
 
+<br>
+<br>
+<img src="https://scontent-bom1-2.xx.fbcdn.net/v/t39.30808-6/391735087_3572327643084739_6528600897403342532_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=kXpXxkSTbO8AX99koiW&_nc_ht=scontent-bom1-2.xx&oh=00_AfCXDVbCm4pa6iER1kj0khAzgXz2RYUMXnX0oh0bMBlttA&oe=65D5CCBA"
+     width="720" height="950" >
+<br><br>
+
+
+
+
+
+<div th:insert="block/foter :: foter"></div>
 
 </body>
 </html>
