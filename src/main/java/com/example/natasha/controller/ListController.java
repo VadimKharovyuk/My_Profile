@@ -31,7 +31,6 @@
 
         @GetMapping("/registration")
         public String registration() {
-//            return "registration";
             return "reg";
         }
 

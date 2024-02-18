@@ -24,6 +24,11 @@ public class MainController {
         return  "redirect:/welcome";
 
     }
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
 
 
 
