@@ -24,12 +24,7 @@ public class MainController {
         return  "redirect:/welcome";
 
     }
-   @GetMapping("/welcome/new-user/api/all/{id}")
-    public String deleteById(@PathVariable Long id){
-        serviceCustomer.deleteById(id);
-       return  "redirect:/list";
 
-   }
 
 
 }
