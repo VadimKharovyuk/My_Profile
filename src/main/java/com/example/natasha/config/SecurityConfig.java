@@ -35,7 +35,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)throws Exception {
         return httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(aut->aut.requestMatchers("/welcome","/welcome/new-user"
-                                ,"/registration","/welcome/new-user/welcome","/blog").permitAll()
+                                ,"/registration","/welcome/new-user/welcome","/blog","/blog/blog/add","/info").permitAll()
 
                         .requestMatchers("/welcome/new-user/**",
                                 "/blog/**"
@@ -43,6 +43,7 @@ public class SecurityConfig {
 
 
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
+
                 .build();
 
 
