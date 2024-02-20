@@ -23,6 +23,7 @@ public class Post {
         this.full_text = full_text;
 
     }
+    //  for test
 
 
 }
