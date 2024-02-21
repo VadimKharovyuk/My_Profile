@@ -43,7 +43,8 @@ public class SecurityConfig {
                         "/task/new/**").authenticated())
 
 
-                .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
+                .formLogin((form->form.loginPage("/login").permitAll()))
+                .logout((log->log.permitAll()))
 
                 .build();
 
