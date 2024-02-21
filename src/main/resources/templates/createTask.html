@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Task</title>
+</head>
+<body>
+<header th:insert="block/header::header"> </header>
+
+<div class="container mt-5 mb-5" >
+    <br><br>
+    <h1>Add Task </h1>
+    <form action="/welcome/new-user/api/all/task/new" method="post">
+        <input type="text" name="title" placeholder="Ведите название   " class="form control"><br><br>
+        <textarea name="full_text" placeholder="Ведите полный текст статтьи  " class="form control"></textarea><br><br>
+        <button type="submit" class="btn btn-success">Добавить </button>
+
+    </form>
+    </div>
+
+</body>
+</html>

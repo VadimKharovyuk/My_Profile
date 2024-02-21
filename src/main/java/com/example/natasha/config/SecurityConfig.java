@@ -35,11 +35,12 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity)throws Exception {
         return httpSecurity.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(aut->aut.requestMatchers("/welcome","/welcome/new-user"
-                                ,"/registration","/welcome/new-user/welcome","/blog","/blog/blog/add","/info").permitAll()
+                                ,"/registration","/welcome/new-user/welcome","/blog","/blog/blog/add","/info","/task","/task/new").permitAll()
 
                         .requestMatchers("/welcome/new-user/**",
                                 "/blog/**"
-                        ,"/blog/blog/add/**").authenticated())
+                        ,"/blog/blog/add/**",
+                        "/task/new/**").authenticated())
 
 
                 .formLogin(AbstractAuthenticationFilterConfigurer::permitAll)
