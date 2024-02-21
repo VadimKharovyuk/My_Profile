@@ -21,4 +21,5 @@ public class Task {
     private String name;
     private String title;
     private LocalDateTime timeCreate;
+    private String isReady ;
 }

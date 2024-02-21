@@ -19,6 +19,7 @@
             <th> Name</th>
             <th> Title</th>
             <th> Data Create</th>
+            <th> Finish</th>
         </tr>
         </thead>
 
@@ -26,6 +27,7 @@
             <td th:text="${el.getName()}"/>
             <td th:text="${el.getTitle()}"/>
             <td th:text="${el.getTimeCreate()}"/>
+            <td th:text="${el.getIsReady()}"/>
 
         </tr>
     </table>
