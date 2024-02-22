@@ -19,23 +19,28 @@
 
     <div>
         <div th:if="${param.error}">
-            Invalid username and password.</div>
+            Неверное имя пользователя и пароль</div>
         <div th:if="${param.logout}">
-            You have been logged out.</div>
+            Вы вышли из системы</div>
         <hr>
         <form th:action="@{/login}" method="post">
             <div>
-                <input type="text" name="username" placeholder="Username"/>
+                <input type="text" name="username" placeholder="Имя пользователя"/>
             </div>
-            <div>
-                <input type="password" name="password" placeholder="Password"/>
+            <div >
+
+                <input type="password" name="password" placeholder="Пароль"/>
             </div>
-            <input type="submit" value="Войти" />
+            <br>
+
+            <button type="submit" style="width: 100%" class="btn btn-dark">Войти</button>
         </form>
         <a href="/registration"> регистрация</a>
 
 
     </div>
+    <br><br><br>
+
 
 
 
