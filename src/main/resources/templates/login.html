@@ -7,29 +7,29 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            background-color: #dbe8e8;
             margin: 0;
             padding: 0;
         }
-        .container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #eee9e4;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+        /*.container {*/
+        /*    max-width: 400px;*/
+        /*    margin: 50px auto;*/
+        /*    padding: 20px;*/
+        /*    background-color: #bd3527;*/
+        /*    border-radius: 5px;*/
+        /*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+        /*}*/
         h2 {
             text-align: center;
-            color: #333333;
-            border-bottom: 2px solid #007bff;
+            color: #ece3e3;
+            border-bottom: 2px solid #f5e7e7;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
         label {
             display: block;
             margin-bottom: 5px;
-            color: #333333;
+            color: #eae5e5;
         }
         input[type="text"],
         input[type="password"],
@@ -37,45 +37,58 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid #cccccc;
+            border: 1px solid #f3eaea;
             border-radius: 4px;
             box-sizing: border-box;
             color: #333333;
-            background-color: #f9f9f9;
+            background-color: #ece5e5;
         }
         input[type="text"]:focus,
         input[type="password"]:focus {
             outline: none;
-            border-color: #007bff;
+            border-color: #4b0bab;
         }
         button {
-            background-color: #007bff;
+            background-color: #d52d21;
             color: #ffffff;
             border: none;
             cursor: pointer;
         }
         button:hover {
-            background-color: #0056b3;
+            background-color: #89cee8;
         }
         .register-link {
             text-align: center;
             margin-top: 10px;
-            color: #007bff;
+            color: #e5e1dc;
         }
         .register-link a {
-            color: #007bff;
+            color: #eee6e6;
             text-decoration: none;
         }
         .register-link a:hover {
             text-decoration: underline;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
-<body>
+<header th:insert="block/header::header"> </header>
+
+
+<body class="d-flex h-100 text-center text-bg-dark">
+
+
 <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
     <h2>Login </h2>
-    <form action="/welcome" method="post">
+    <form action="/login" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <label for="password">Password:</label>
